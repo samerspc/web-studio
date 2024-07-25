@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="refresh" content="URL=https://www.trinityit.pro/projects" />
+    <title>Trinity</title>
+    <link rel="icon" href="images/icon.png" type="image/png">
+    <link rel="stylesheet" href="style.css">
+    <style>
+       .mobile-header {
+            margin-top: 35px;        
+        }
+        
+        .modal {
+            background-color: rgba(255, 255, 255, 0.05);
+            -webkit-backdrop-filter: blur(24px);
+            -moz-backdrop-filter: blur(24px);
+        }
+        
+        @media screen and (max-width: 450px) {
+            form input:not([type="submit"]) {
+                border-bottom: 1px solid #000000;
+                border-radius: 0px;
+                
+            }
+        }
+        
+        @media screen and (max-width: 1194px) {
+            form input:not([type="submit"]) {
+                border-bottom: 1px solid #000000;
+                border-radius: 0px;
+                
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="page">
+            <header class="header">
+                <img src="Trinity.svg" class="logo" alt="" onclick="window.location.href='index.html'">
+                <div class="menu">
+                    <ul class="menu-list">
+                        <li><a href="#" class="menu-link">работы</a></li>
+                        <!--<li><a href="team.html" class="menu-link">команда</a></li>-->
+                        <li><a href="#request" class="menu-link">контакты</a></li>
+                    </ul>
+                </div>
+                <button id="openModalBtn" class="menu-link">обсудить проект</button>
+            </header>
+            <header class="mobile-header">
+                <img src="Trinity.svg" class="logo" alt="" onclick="window.location.href='index.html'">
+                <button onclick="openMenu()" class="menu-switch-btn" style="color: black;">
+                    меню
+                </button>
+                <div class="mobile-menu" id="haveTOopen">
+                    <div class="mobile-menu-up">
+                        <img src="Trinity.svg" id="" class="logo" alt="" onclick="window.location.href='index.html'">
+                        <button onclick="closeMenu()" class="menu-switch-btn" style="color: black;">закрыть</button>
+                    </div>
+                    <div class="mobile-menu-menu">
+                        <a href="projects.html">работы</a>
+                        <!--<a href="team.html" id="team">команда</a>-->
+                        <a href="projects.html#request" id="cont" onclick="closeMenu()">контакты</a>
+                        <a id="disc">обсудить проект</a>
+                    </div>
+                    <div class="mobile-menu-contacts">
+                        <a href="https://t.me/hmiller1">telegram</a>
+                        <a href="https://t.me/hmiller1">instagram</a>
+                        <a href="mailto:info@trinityit.pro">info@trinityit.pro</a>
+                    </div>
+                </div>
+            </header>
+            <div class="info" id="info">
+                <div class="title" id="allworks">
+                    все работы
+                </div>
+
+                <div class="title" id="devwork" style="display: none">
+                    разработка
+                </div>
+
+                <div class="title" id="deswork" style="display: none">
+                    дизайн
+                </div>
+
+                <div class="title" id="aiwork" style="display: none">
+                    искусственный интеллект
+                </div>
+
+
+                <div class="tags">
+                    <button class="tag current" id="all" onclick="chooseTag(this)">
+                        all
+                    </button>
+                    <button class="tag" id="development" onclick="chooseTag(this)">
+                        development
+                    </button>
+                    <button class="tag" id="design" onclick="chooseTag(this)">
+                        design
+                    </button>
+                    <button class="tag" id="ai" onclick="chooseTag(this)">
+                        artificial intelligence
+                    </button>
+
+                </div>
+                <div class="description" id="tags-description-all">
+                    улучшаем бизнес наших клиентов с помощью
+                    информационных технологий, анализируя их цели и
+                    проблемы, мы находим быстрые и эффективные решения.
+                </div>
+                <div class="description" id="tags-description-development">
+
+                    любое современное предприятие начинается с создания веб-сайта. мы создаём показательные
+                    веб-приложения любого уровня сложности, которые помогают вывести продукт в лидеры индустрии. </div>
+                <div class="description" id="tags-description-design">
+                    разрабатываем исключительные дизайн-решения, продвигающие вперёд пользовательский опыт и качество
+                    цифровых продуктов. наши проекты выделяются хорошим стилем и удобством использования. </div>
+                <div class="description" id="tags-description-ai">
+                    используем искусственный интеллект для оптимизации бизнес-процессов и улучшения цифровых продуктов.
+                    наши решения помогают достигать новых уровней автоматизации и повышать эффективность процессов в
+                    несколько раз.
+
+                </div>
+            </div>
+
+
+            <div class="projects-grid">
+                <div class="project">
+                    <div class="project-img">
+                        <a href="https://creatore.pro/"><img src="images/creatore.png" alt=""></a>
+                    </div>
+                    <div class="project-title">
+                        <a href="https://creatore.pro/" style="text-decoration: none; color: black;">
+                            <div class="project-name" style="cursor: pointer;">Creatore</div>
+                        </a>
+                        <div class="project-description">интернет-магазин женской одежды</div>
+                    </div>
+                    <div class="tags">
+                        <div class="tag">
+                            development
+                        </div>
+                        <div class="tag">
+                            ui/ux
+                        </div>
+                    </div>
+                </div>
+                <div class="project">
+                    <div class="project-img">
+                        <a href="https://www.clickprofit.io/?v=pEugdQxDM4iRrZPbPeZV&r=1719142975981.4oJEY1">
+                            <img src="images/clickprofit.png" alt="">
+                        </a>
+                    </div>
+                    <div class="project-title">
+                        <a href="https://www.clickprofit.io/?v=pEugdQxDM4iRrZPbPeZV&r=1719142975981.4oJEY1" style="text-decoration: none; color: black;">
+                            <div class="project-name">click profit</div>
+                        </a>
+                        <div class="project-description">инвестиционная компания</div>
+                    </div>
+                    <div class="tags">
+                        <div class="tag">
+                            development
+                        </div>
+                        <div class="tag">
+                            ui/ux
+                        </div>
+                    </div>
+                </div>
+                <div class="project">
+                    <div class="project-img">
+                        <a href="https://art-in-pec.com/"><img src="images/ArtinPEC.png" alt=""></a>
+                    </div>
+                    <div class="project-title">
+                        <a href="https://art-in-pec.com/" style="text-decoration: none; color: black;">
+                            <div class="project-name">Art in PEC</div>
+                        </a>
+                        <div class="project-description">сегментация фасадов зданий с помощью машинного обучения</div>
+                    </div>
+                    <div class="tags">
+                        <div class="tag">
+                            development
+                        </div>
+                        <div class="tag">
+                            AI
+                        </div>
+                    </div>
+                </div>
+                <div class="project">
+                    <div class="project-img">
+                        <a href="https://polina-mitut.ru/"><img src="images/Polina.png" alt=""></a>
+                    </div>
+                    <div class="project-title">
+                        <a href="https://polina-mitut.ru/" style="text-decoration: none; color: black;">
+                            <div class="project-name">Полина Митютнева</div>
+                        </a>
+                        <div class="project-description">веб-сайт бизнес-коуча </div>
+                    </div>
+                    <div class="tags">
+                        <div class="tag">
+                            development
+                        </div>
+                        <div class="tag">
+                            ui/ux
+                        </div>
+                    </div>
+                </div>
+                <div class="project">
+                    <div class="project-img">
+                        <img src="images/sovkom.svg" alt="">
+                    </div>
+                    <div class="project-title">
+                        <div class="project-name">совкомбанк</div>
+                        <div class="project-description">разработка модели прогнозирования нагрузки на серверы</div>
+                    </div>
+                    <div class="tags">
+                        <div class="tag">
+                            development
+                        </div>
+                        <div class="tag">
+                            AI
+                        </div>
+                    </div>
+                </div>
+                <div class="project">
+                    <div class="project-img">
+                        <a href="https://elementtaxi.ru/"><img src="images/element.png" alt=""></a>
+                    </div>
+                    <div class="project-title">
+                        <a href="https://elementtaxi.ru/" style="text-decoration: none; color: black;">
+                            <div class="project-name">element</div>
+                        </a>
+                        <div class="project-description">система управления таксопарком онлайн</div>
+                    </div>
+                    <div class="tags">
+                        <div class="tag">
+                            development
+                        </div>
+                        <div class="tag">
+                            ui/ux
+                        </div>
+                    </div>
+                </div>
+                <div class="project">
+                    <div class="project-img">
+                        <a href="https://nfp2b.ru/"><img src="images/firstbit.png" alt=""></a>
+                    </div>
+                    <div class="project-title">
+                        <a href="https://nfp2b.ru/" style="text-decoration: none; color: black;">
+                            <div class="project-name">NFP первый бит</div>
+                        </a>
+                        <div class="project-description">компания по автоматизации бизнеса</div>
+                    </div>
+                    <div class="tags">
+                        <div class="tag">
+                            development
+                        </div>
+                        <div class="tag">
+                            ui/ux
+                        </div>
+                    </div>
+                </div>
+                <div class="project">
+                    <div class="project-img">
+                        <a href="https://emote.kz/"><img src="images/emote.png" alt=""></a>
+                    </div>
+                    <div class="project-title">
+                        <a href="https://emote.kz/" style="text-decoration: none; color: black;">
+                            <div class="project-name">EMOTE</div>
+                        </a>
+                        <div class="project-description">интернет-магазин подарков</div>
+                    </div>
+                    <div class="tags">
+                        <div class="tag">
+                            development
+                        </div>
+                        <div class="tag">
+                            ui/ux
+                        </div>
+                    </div>
+                </div>
+                <div class="project">
+                    <div class="project-img">
+                        <a href="https://prodamus.ru/"><img src="images/prodamus.png" alt=""></a>
+                    </div>
+                    <div class="project-title">
+                        <a href="https://prodamus.ru/" style="text-decoration: none; color: black;"><div class="project-name">prodamus</div></a>
+                        <div class="project-description">IT-сервисы для онлайн-бизнеса</div>
+                    </div>
+                    <div class="tags">
+                        <div class="tag">
+                            development
+                        </div>
+                        <div class="tag">
+                            ui/ux
+                        </div>
+                    </div>
+                </div>
+                <div class="project">
+                    <div class="project-img">
+                        <a href="https://reutova-kad.ru/"><img src="images/reutovakad.png" alt=""></a>
+                    </div>
+                    <div class="project-title">
+                        <a href="https://reutova-kad.ru/" style="text-decoration: none; color: black;"><div class="project-name">REUTOVA KAD</div></a>
+                        <div class="project-description">веб-сайт для кадастрового инженера</div>
+                    </div>
+                    <div class="tags">
+                        <div class="tag">
+                            development
+                        </div>
+                        <div class="tag">
+                            ui/ux
+                        </div>
+                    </div>
+                </div>
+                <div class="project">
+                    <div class="project-img">
+                        <img src="images/knitted.png" alt="">
+                    </div>
+                    <div class="project-title">
+                        <div class="project-name">knitted*</div>
+                        <div class="project-description">интернет-магазин лимитированных кроссовок</div>
+                    </div>
+                    <div class="tags">
+                        <div class="tag">
+                            development
+                        </div>
+                        <div class="tag">
+                            ui/ux
+                        </div>
+                        <div class="tag">
+                            brand
+                        </div>
+                    </div>
+                </div>
+                <div class="project">
+                    <div class="project-img">
+                        <img src="images/repet.png" alt="">
+                    </div>
+                    <div class="project-title">
+                        <div class="project-name">repet</div>
+                        <div class="project-description">телеграм-бот для подготовки к экзаменам </div>
+                    </div>
+                    <div class="tags">
+                        <div class="tag">
+                            development
+                        </div>
+                        <div class="tag">
+                            ux
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form">
+                <div class="discussion" id="request">
+                    <div class="title">обсудим идеи прямо сейчас!</div>
+                    <div class="description1">напишите нам или заполните форму</div>
+                </div>
+                <div class="block1">
+                    <div class="block">
+                        <div class="social">
+                            <a href="https://t.me/hmiller1">instagram</a>
+                        </div>
+                        <div class="social">
+                            <a href="https://t.me/hmiller1">telegram</a>
+                        </div>
+                        <div class="social">
+                            <a href="mailto:info@trinityit.pro">info@trinityit.pro</a>
+                        </div>
+                    </div>
+                   <form onsubmit="submitModalForm(event)" method="POST" id="modalForm">
+                        <input type="text" id="modalName" name="name" required placeholder="имя"><br><br>
+                        <input type="text" id="modalPhone" name="phone" required placeholder="телефон/телеграм"><br><br>
+                        <input type="submit" value="отправить заявку" onclick="window.location.href='index.html'">
+                    </form>
+                </div>
+    
+                <div id="modal" class="modal">
+                    <div class="modal-content">
+                        <div class="modal-info">
+                            <button id="closeModalBtn" class="closeModalBtn" style="color: black;">
+                                закрыть
+                            </button>
+                            <div class="title">
+                                давайте поговорим о вашем проекте
+                            </div>
+                            <div class="description">
+                                напишите нам или заполните форму ниже
+                            </div>
+                        </div>
+                        <form onsubmit="submitModalForm(event)" method="POST" id="modalForm">
+                            <input type="text" id="modalName" name="name" required placeholder="имя"><br><br>
+                            <input type="text" id="modalPhone" name="phone" required placeholder="телефон/телеграм"><br><br>
+                            <input type="submit" value="отправить заявку" onclick="window.location.href='index.html'">
+                    </form>
+                    </div>
+                </div>
+            </div>
+            <div class="policy">
+                <div class="content">
+                    <a href="policy.html">политика конфиденциальности</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
